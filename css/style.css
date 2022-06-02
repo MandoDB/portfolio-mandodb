@@ -1,0 +1,284 @@
+@font-face {
+    font-family: EDITION;
+    src: url('../fonts/Marcovaldo-Regular-trial.ttf');
+}
+
+@font-face {
+    font-family: Vogue;
+    src: url('../fonts/Vogue.ttf');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: black;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* responsive .nav */
+@media screen and (max-width: 600px) {
+    .nav {
+        display: none;
+    }
+
+    div#lamp {
+        height: 40vh;
+    }
+
+    .card {
+        width: 70%;
+        max-width: 70%;
+        min-width: 70%;
+    }
+
+}
+
+
+h1 {
+    font-weight: normal;
+}
+
+.title {
+    color: rgb(129, 129, 129);
+    font-family: Vogue;
+    text-align: center;
+    font-size: 80px;
+    letter-spacing: 4px;
+    display: block;
+    transition: 1s;
+}
+
+.title:hover {
+    color: rgb(255, 255, 255);
+    transition: 1s;
+    /* text shadow */
+    text-shadow:  0 0 20px rgb(255, 255, 255);
+}
+
+.nav {
+    position: fixed;
+    right: 0%;
+    margin: 40px;
+    top: 0%;
+    padding: 12px 15px;
+    background: rgba(23, 23, 23, 0.61);
+    color: white;
+    font-family: sans-serif;
+    border-radius: 10px;
+}
+
+.nav a {
+    padding: 8px;
+    color: white;
+    text-decoration: none;
+    visibility: inherit;
+}
+
+.nav a:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+
+.container-card {
+    overflow: hidden;
+    width: 100%;
+    overflow: hidden;
+    padding: 0.1px;
+    margin-top: 300px;
+}
+
+.container-card h1 {
+    color:white;
+    font-family: Vogue;
+    text-align: center;
+    font-size: 80px;
+    letter-spacing: 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.container-card .card {
+    max-width: 30%;
+    padding: 30px 20px;
+    padding-bottom: 10px;
+    background: rgba(32, 32, 32, 0.5);
+    border-radius: 10px;
+    transition: 1s;
+    margin: 30px auto;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.card p {
+    color:white;
+    text-align: center;
+    font-family: Vogue;
+    font-size: 30px;
+    letter-spacing: 4px;
+
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+/* lamp */
+
+.container-head {
+    width: 100%;
+}
+
+.lamp-container {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.rope {
+    height: 120px;
+    width: 2px;
+    margin: 0 auto;
+    z-index: 10;
+    background-color: rgb(53, 49, 67);
+    position: relative;
+    transform-origin: top center;
+    animation: swing-rope 1s infinite ease-in-out alternate;
+    box-shadow: -76px -10px 8px rgba(0, 0, 0, .2);
+}
+
+.rope:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 116px;
+    left: -4px;
+    border-bottom: 18px solid rgb(53, 49, 67);
+    border-top: 0 transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-radius: 4px;
+}
+
+.lamp {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 131px;
+    left: 70px;
+    transform-origin: top center;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 50%;
+    box-shadow: -76px -24px 4px rgba(0, 0, 0, .1), 0 0 6px rgba(255, 255, 255, .2), inset 0 0 4px rgba(255, 255, 255, .2);
+    animation: swing-lamp 1s infinite ease-in-out alternate;
+}
+
+.lamp.light {
+    background-color: rgb(104, 22, 175);
+    box-shadow: 0 0 100px rgb(204, 149, 255)
+}
+
+@keyframes swing-rope {
+    0% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes swing-lamp {
+    0% {
+        transform: translateX(-16px);
+    }
+
+    100% {
+        transform: translateX(16px);
+    }
+}
+
+/* scroll indicator */
+
+.mouse {
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    width: 24px;
+    margin: -12px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 30px;
+    opacity: .3;
+}
+
+.mouse:after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 13px;
+    top: 10px;
+    width: 4px;
+    height: 4px;
+    margin-left: -3px;
+    background-color: white;
+    border-radius: 2px;
+    animation: mouse-wheel 2.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+@keyframes mouse-wheel {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    30% {
+        transform: translateY(0);
+        height: 4px;
+    }
+
+    50% {
+        transform: translateY(0);
+        height: 20px;
+    }
+
+    70% {
+        transform: translateY(15px);
+        height: 4px;
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
