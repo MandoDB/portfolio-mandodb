@@ -8,6 +8,8 @@
     src: url('../fonts/Vogue.ttf');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
@@ -37,6 +39,24 @@ body {
 
     .title {
         font-size: 20px;
+    }
+
+    .contact {
+        max-width: 70%;
+        min-width: 70%;
+        margin: 10px auto;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .container-card {
+        margin-top: 0px;
+    }
+
+    .skills {
+        max-height: 100%;
+        min-height: 100%;
+        height: 100%;
     }
 
 }
@@ -97,7 +117,7 @@ h1 {
 }
 
 .container-card h1 {
-    color:white;
+    color: white;
     font-family: Vogue;
     text-align: center;
     font-size: 80px;
@@ -131,7 +151,7 @@ h1 {
 }
 
 .card p {
-    color:white;
+    color: white;
     text-align: center;
     font-family: Vogue;
     font-size: 30px;
@@ -144,6 +164,282 @@ h1 {
     border-radius: 10px;
     transition: 1s;
 }
+
+.link {
+    text-align: center;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.contact {
+    padding: 15px 15px;
+    background-color: rgba(23, 23, 23, 0.61);
+    max-width: 20%;
+    margin: 30px auto;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+    transition: 1s;
+}
+
+.contact a {
+    font-family: Vogue;
+    letter-spacing: 3px;
+    font-size: 15px;
+    color: white;
+    text-underline-offset: 5px;
+    text-decoration: underline 1px;
+}
+
+.contact:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+
+
+.skills {
+    font-family: sans-serif;
+    color: white;
+    background-color: rgba(23, 23, 23, 0.61);
+    width: 80%;
+    padding: 30px;
+    margin: auto;
+    border-radius: 10px;
+    height: 250px;
+}
+
+.skills h1 {
+    font-family: Vogue;
+    font-size: 50px;
+    letter-spacing: 4px;
+    text-align: center;
+    text-decoration: underline 1px;
+    text-underline-offset: 5px;
+}
+
+.skill-lockup {
+	max-width: 450px;
+	width: 100%;
+	float: left;
+	margin-right: 40px;
+}
+
+
+.mr {
+	margin-right: 0;
+}
+
+.mb {
+	margin-bottom: 5px;
+}
+
+.skill-info {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.skill-name {
+	float: left;
+}
+
+.skill-status {
+	float: right;
+	color: #c4c4c4;
+	font-size: .8em;
+}
+.skill-bar {
+	display: block;
+	max-width: 450px;
+	width: 100%;
+	height: 5px;
+	background: #232339;
+    border-radius: 10px;
+	clear: both;
+	margin: 20px 0;
+}
+
+.skill-level {
+	display: table;
+	height: 5px;
+}
+.communication, .planning,
+.learning, .programming,
+.visual-design, .ux-design {
+	background: #8f4dcd;
+    border-radius: 10px;
+
+}
+
+.communication {
+	width: 40%;
+	-webkit-animation: communication 10s linear;
+	animation: communication 10s linear;
+}
+
+.planning {
+	width: 15%;
+	-webkit-animation: planning 10s linear;
+	animation: planning 10s linear;
+}
+
+.learning {
+	width: 45%;
+	-webkit-animation: learning 10s linear;
+	animation: learning 10s linear;
+}
+
+.programming {
+	width: 30%;
+	-webkit-animation: programming 10s linear;
+	animation: programming 10s linear;
+}
+
+.visual-design {
+	width: 20%;
+	-webkit-animation: visual-design 10s linear;
+	animation: visual-design 10s linear;
+}
+
+.ux-design {
+	width: 10%;
+	-webkit-animation: ux-design 10s linear;
+	animation: ux-design 10s linear;
+}
+
+
+/*-----------------------
+	  	Animations 
+-------------------------*/ 
+@-webkit-keyframes communication {
+	from { width: 0%; }
+	to { width: 40%; }
+}
+
+@keyframes communication {
+	from { width: 0%; }
+	to { width: 40%; }
+}
+
+/*-----------------------
+	Planning Animation 
+-------------------------*/
+@-webkit-keyframes planning {
+	from { width: 0%; }
+	to { width: 15%; }
+}
+
+@keyframes planning {
+	from { width: 0%; }
+	to { width: 15%; }
+}
+
+/*-----------------------
+	Learning Animation 
+-------------------------*/ 
+@-webkit-keyframes learning {
+	from { width: 0%; }
+	to { width: 45%; }
+}
+
+@keyframes learning {
+	from { width: 0%; }
+	to { width: 45%; }
+}
+
+/*-----------------------
+  Programming Animation 
+-------------------------*/ 
+@-webkit-keyframes programming {
+	from { width: 0%; }
+	to { width: 30%; }
+}
+
+@keyframes programming {
+	from { width: 0%; }
+	to { width: 30%; }
+}
+
+/*-----------------------
+Visual-Design Animation  
+-------------------------*/ 
+@-webkit-keyframes visual-design {
+	from { width: 0%; }
+	to { width: 20%; }
+}
+
+@keyframes visual-design {
+	from { width: 0%; }
+	to { width: 20%; }
+}
+
+/*-----------------------
+   UX-Design Animation  
+-------------------------*/ 
+@-webkit-keyframes ux-design {
+	from { width: 0%; }
+	to { width: 10%; }
+}
+
+@keyframes ux-design {
+	from { width: 0%; }
+	to { width: 10%; }
+}
+
+
+/*-----------------------
+	  Media queries
+-------------------------*/ 
+
+
+@media screen and (max-width: 955px) {
+	.skillset {
+		padding: 20px;
+	}
+	.skill-lockup {
+		max-width: 700px;
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+	}
+
+    .skills {
+        height: 100%;
+    }
+
+	.skill-bar {
+		max-width: 700px;
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* lamp */
 
